@@ -23,15 +23,30 @@
     margin: 0;
 }
 
-.result-title.win{
+.scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.result-title.win {
     color: #4caf50;
 }
 
-.result-title.lose{
+.result-title.lose {
     color: #f44336;
 }
 
-.result-title.tie{
+.result-title.tie {
     color: #ff9800;
 }
 

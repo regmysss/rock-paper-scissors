@@ -33,7 +33,7 @@ export const DisplayResult = () => {
                         className={`result-title wait`}
                         >Waiting for the PC...</h2>
                     ) : (
-                        <h2 className={`result-title ${result}`}>
+                        <h2 className={`result-title ${result} scale-in`}>
                             {result === "win"
                                 ? "You Win!"
                                 : result === "lose"
