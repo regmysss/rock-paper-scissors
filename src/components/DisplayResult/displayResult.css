@@ -20,17 +20,6 @@
     animation: scaleIn 0.4s ease-out forwards;
 }
 
-@keyframes scaleIn {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 .result-title.win {
     color: #4caf50;
     text-shadow: 0 0px 20px #4caf50;
@@ -56,12 +45,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-}
-
-@media (max-width: 768px) {
-    .result-detail {
-        flex-direction: column;
-    }
 }
 
 .play-again-btn {
@@ -99,4 +82,21 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .result-detail {
+        flex-direction: column;
+    }
 }
