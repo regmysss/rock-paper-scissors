@@ -1,10 +1,3 @@
-/* .choice-display {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-} */
-
 .display-result-wrapper {
     margin: 0 auto;
     max-width: 1200px;
@@ -40,18 +33,22 @@
 
 .result-title.win {
     color: #4caf50;
+    text-shadow: 0 0px 20px #4caf50;
 }
 
 .result-title.lose {
     color: #f44336;
+    text-shadow: 0 0px 20px #f44336;
 }
 
 .result-title.tie {
     color: #ff9800;
+    text-shadow: 0 0px 20px #ff9800;
 }
 
 .result-title.wait {
     color: #bdbdbd;
+    text-shadow: 0 0px 20px #bdbdbd;
 }
 
 .result-detail {
@@ -79,6 +76,7 @@
     cursor: pointer;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0px 8px #0066ff;
 }
 
 .play-again-btn:hover {

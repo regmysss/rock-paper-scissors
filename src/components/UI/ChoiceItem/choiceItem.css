@@ -13,6 +13,7 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     box-sizing: border-box;
+    box-shadow: 0 0px 8px #0066ff;
 }
 
 .choice-item-btn:hover {
@@ -46,11 +47,13 @@
 .choice-item.player {
     border: 2px solid #0066ff;
     background-color: rgba(0, 102, 255, 0.2);
+    box-shadow: 0 0px 8px #0066ff;
 }
 
 .choice-item.computer {
     border: 2px solid #8400ff;
     background-color: rgba(132, 0, 255, 0.2);
+    box-shadow: 0 0px 8px #8400ff;
 }
 
 .choice-item img {

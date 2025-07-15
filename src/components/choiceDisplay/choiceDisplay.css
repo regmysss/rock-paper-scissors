@@ -16,6 +16,7 @@
     margin: 0;
     font-size: 2rem;
     color: #0066ff;
+    text-shadow: 0 0px 20px #0066ff;
 }
 
 .choice-list {
