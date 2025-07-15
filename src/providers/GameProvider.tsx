@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SOUNDS } from "../constants/sounds";
 import { GameContext } from "../contexts/GameContext";
 import type { Choice } from "../types/choice";
@@ -26,41 +26,35 @@ export const GameProvider = ({ children }: { children: React.ReactNode }) => {
         });
     };
 
-    const determinateChoise = useCallback(
-        (playerChoice: Choice, computerChoice: Choice) => {
-            const player = playerChoice.id;
-            const computer = computerChoice.id;
-
-            if (player === computer) {
-                setResult("tie");
-                SOUNDS.tie.play();
-                return;
-            }
-
-            if (
-                (player === "rock" && computer === "scissors") ||
-                (player === "paper" && computer === "rock") ||
-                (player === "scissors" && computer === "paper")
-            ) {
-                updateScore("win");
-                setResult("win");
-                SOUNDS.win.play();
-            } else {
-                updateScore("lose");
-                setResult("lose");
-                SOUNDS.lose.play();
-            }
-        },
-        []
-    );
-
     useEffect(() => {
-        if (playerChoice && computerChoice)
-            setTimeout(() => {
-                determinateChoise(playerChoice, computerChoice);
+        if (playerChoice && computerChoice) {
+            const timeout = setTimeout(() => {
+                const player = playerChoice.id;
+                const computer = computerChoice.id;
+
+                if (player === computer) {
+                    setResult("tie");
+                    SOUNDS.tie.play();
+                } else if (
+                    (player === "rock" && computer === "scissors") ||
+                    (player === "paper" && computer === "rock") ||
+                    (player === "scissors" && computer === "paper")
+                ) {
+                    updateScore("win");
+                    setResult("win");
+                    SOUNDS.win.play();
+                } else {
+                    updateScore("lose");
+                    setResult("lose");
+                    SOUNDS.lose.play();
+                }
+
                 setShowResult(true);
             }, 1000);
-    }, [playerChoice, computerChoice, determinateChoise]);
+
+            return () => clearTimeout(timeout);
+        }
+    }, [playerChoice, computerChoice]);
 
     const resetGame = () => {
         setPlayerChoice(null);
