@@ -77,6 +77,7 @@
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
     box-shadow: 0 0px 8px #0066ff;
+    font-weight: bold;
 }
 
 .play-again-btn:hover {
