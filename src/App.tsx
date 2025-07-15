@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ChooseDisplay } from "./components/choiceDisplay/ChoiceDisplay";
+import { ChooseDisplay } from "./components/ChooseDisplay/ChooseDisplay";
 import { Header } from "./components/Header/Header";
 import { ScoreBoard } from "./components/ScoreBoard/ScoreBoard";
 import { GameContext } from "./contexts/GameContext";

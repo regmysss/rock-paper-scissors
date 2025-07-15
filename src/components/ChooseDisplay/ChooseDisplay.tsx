@@ -1,4 +1,4 @@
-import "./choiceDisplay.css";
+import "./chooseDisplay.css";
 import { CHOICES } from "../../constants/choices";
 import { ChoiceItemBtn } from "../UI/ChoiceItem/ChoiceItem";
 
