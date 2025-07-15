@@ -1,0 +1,39 @@
+.score-board-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.score-board-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.score-board-item {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.score-board-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.score-board-item p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.score-board-item.win {
+    background: linear-gradient(to left, #4caf50, transparent);
+}
+
+.score-board-item.lose {
+    background: linear-gradient(to right, #f44336, transparent);
+}

@@ -1,0 +1,71 @@
+.choice-item-btn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #0066ff;
+    background-color: rgba(0, 102, 255, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.choice-item-btn:hover {
+    background-color: #0066ff;
+}
+
+.choice-item-btn img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.choice-item-btn span {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.choice-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.choice-item.player {
+    border: 2px solid #0066ff;
+    background-color: rgba(0, 102, 255, 0.2);
+}
+
+.choice-item.computer {
+    border: 2px solid #8400ff;
+    background-color: rgba(132, 0, 255, 0.2);
+}
+
+.choice-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.choice-item h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.choice-item span {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
