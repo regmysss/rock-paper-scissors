@@ -4,7 +4,6 @@ import { Header } from "./components/Header/Header";
 import { ScoreBoard } from "./components/ScoreBoard/ScoreBoard";
 import { GameContext } from "./contexts/GameContext";
 import { DisplayResult } from "./components/DisplayResult/DisplayResult";
-import "./styles/app.css";
 
 export const App = () => {
     const { playerChoice } = useContext(GameContext);

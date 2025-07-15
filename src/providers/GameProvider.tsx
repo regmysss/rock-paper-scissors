@@ -27,17 +27,20 @@ export const GameProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const determinateChoise = useCallback(
-        (playerChoice: string, computerChoice: string) => {
-            if (playerChoice === computerChoice) {
+        (playerChoice: Choice, computerChoice: Choice) => {
+            const player = playerChoice.id;
+            const computer = computerChoice.id;
+
+            if (player === computer) {
                 setResult("tie");
                 SOUNDS.tie.play();
                 return;
             }
 
             if (
-                (playerChoice === "rock" && computerChoice === "scissors") ||
-                (playerChoice === "paper" && computerChoice === "rock") ||
-                (playerChoice === "scissors" && computerChoice === "paper")
+                (player === "rock" && computer === "scissors") ||
+                (player === "paper" && computer === "rock") ||
+                (player === "scissors" && computer === "paper")
             ) {
                 updateScore("win");
                 setResult("win");
@@ -54,7 +57,7 @@ export const GameProvider = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         if (playerChoice && computerChoice)
             setTimeout(() => {
-                determinateChoise(playerChoice.id, computerChoice.id);
+                determinateChoise(playerChoice, computerChoice);
                 setShowResult(true);
             }, 1000);
     }, [playerChoice, computerChoice, determinateChoise]);

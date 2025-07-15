@@ -8,8 +8,8 @@ export const Header = () => {
                     <a className="logo" href=".">
                         <img src="logo.png" alt="logo" />
                     </a>
-                    <button className="rule-btn">
-                        <img src="rules.svg" alt="refresh" />
+                    <button title="Rules" className="rule-btn">
+                        <img src="rules.svg" alt="rules" />
                     </button>
                 </div>
             </div>

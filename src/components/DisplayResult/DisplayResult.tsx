@@ -29,9 +29,9 @@ export const DisplayResult = () => {
             <div className="display-result-wrapper">
                 <div className="display-result-content">
                     {!showResult ? (
-                        <h2
-                        className={`result-title wait`}
-                        >Waiting for the PC...</h2>
+                        <h2 className={`result-title wait`}>
+                            Waiting for the PC...
+                        </h2>
                     ) : (
                         <h2 className={`result-title ${result} scale-in`}>
                             {result === "win"
@@ -47,7 +47,8 @@ export const DisplayResult = () => {
                         <ChoiceItem player="computer" choice={animatedChoice} />
                     </div>
                     <button
-                        className={`play-again-btn`}
+                        title="Play again"
+                        className="play-again-btn"
                         onClick={resetGame}
                         disabled={!showResult}
                     >
